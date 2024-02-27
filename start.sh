@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-docker-compose build --progress=plain
-docker-compose up --remove-orphans
+export UID=$(id -u)
+export GID=$(id -g)
+
+docker compose --progress plain build
+docker compose up
